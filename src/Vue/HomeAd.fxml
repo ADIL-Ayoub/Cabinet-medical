@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeAdController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <Button id="parametre_btn" layoutX="828.0" layoutY="-7.0" mnemonicParsing="false" onAction="#toExit" prefHeight="50.0" prefWidth="58.0" style="-fx-background-color: transparent;;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="parametre_img" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-exit-48(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="patient_btn" layoutX="289.0" layoutY="98.0" mnemonicParsing="false" onAction="#toPatient" onMouseClicked="#openHome" prefHeight="103.0" prefWidth="109.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="patient_img" fitHeight="71.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/patients.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="calendrier_btn" layoutX="485.0" layoutY="98.0" mnemonicParsing="false" onAction="#toRDV" prefHeight="103.0" prefWidth="109.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="calendrier_img" fitHeight="71.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calendrier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="paiement_btn" layoutX="681.0" layoutY="98.0" mnemonicParsing="false" onAction="#toStatistics" prefHeight="103.0" prefWidth="109.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="paiement_img" fitHeight="71.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-statistics-47.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text id="paiement_text" layoutX="706.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" wrappingWidth="58.0234375">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text id="calendrier_text" layoutX="508.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calendrier">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text id="patient_text" layoutX="316.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients" wrappingWidth="54.099609375">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Button id="securite_btn" layoutX="583.0" layoutY="272.0" mnemonicParsing="false" onAction="#toSecurite" prefHeight="103.0" prefWidth="109.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="securite_img" fitHeight="71.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/sécurité.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="visite_btn" layoutX="390.0" layoutY="272.0" mnemonicParsing="false" onAction="#toVisite" prefHeight="103.0" prefWidth="109.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView id="visite_img" fitHeight="71.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/visite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text id="securite_text" layoutX="610.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sécurité" wrappingWidth="54.099609375">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text id="visite_text" layoutX="422.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visites" wrappingWidth="44.13165283203125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="82.0" prefHeight="428.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="82.0">
+         <children>
+            <ImageView fitHeight="166.0" fitWidth="177.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/transparent-heart-icon-health-care-icon-medical-services-icon-5fcbd37a03aac1.974566991607193466015.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="45.0" layoutY="334.0" text="DARDOURI Chaimae" textFill="WHITE" />
+            <Label layoutX="56.0" layoutY="360.0" text="OUALI Chaymaa" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="387.0" text="ADIL Ayoub" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane1" prefHeight="82.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="53.0" layoutY="28.0" prefHeight="26.0" prefWidth="109.0" text="E-Cabinet" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

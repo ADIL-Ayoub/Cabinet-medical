@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="securiteStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SecuriteController">
+   <children>
+      <Pane id="paneHorizentalBar" fx:id="pane" layoutY="-2.0" prefHeight="84.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="acceuilButton" alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="26.0" mnemonicParsing="false" onAction="#toHome" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="88.0" styleClass="btn-home" stylesheets="@../../bin/application/application.css" text="Acceuil" textOverrun="CLIP">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Yu Gothic Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminButton" layoutX="352.0" layoutY="27.0" mnemonicParsing="false" onAction="#adminPage" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="127.0" styleClass="btn-home" text="Modifier Admin">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="userButton" layoutX="505.0" layoutY="27.0" mnemonicParsing="false" onAction="#userPage" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="149.0" styleClass="btn-home" text="Modifier utilisateur">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <stylesheets>
+            <URL value="@application.css" />
+            <URL value="@application2.css" />
+         </stylesheets></Pane>
+      <Pane id="subPaneForm" fx:id="adminPane" layoutX="200.0" layoutY="84.0" prefHeight="416.0" prefWidth="700.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <TextField fx:id="adminUsernameA" alignment="CENTER" layoutX="347.0" layoutY="61.0" />
+            <TextField fx:id="newAdminUsername" alignment="CENTER" layoutX="347.0" layoutY="157.0" />
+            <Label layoutX="123.0" layoutY="206.0" prefHeight="22.0" prefWidth="222.0" text="Nouveau mot de passe :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="158.0" prefHeight="17.0" prefWidth="200.0" text="Nouveau nom admin :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="110.0" prefHeight="17.0" prefWidth="216.0" text="Mot de passe admin :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="62.0" prefHeight="22.0" prefWidth="222.0" text="Nom administrateur :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="updateAdminButton" alignment="CENTER" layoutX="347.0" layoutY="290.0" mnemonicParsing="false" onAction="#updateAdminButton" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #33698F;" text="Validate" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="newAdminPassword" alignment="CENTER" layoutX="347.0" layoutY="205.0" />
+            <Label fx:id="errorAdminLabel" layoutX="123.0" layoutY="346.0" prefHeight="17.0" prefWidth="339.0" textFill="#ff0000e0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="adminPasswordA" alignment="CENTER" layoutX="347.0" layoutY="109.0" />
+         </children>
+      </Pane>
+      <Pane id="subPaneForm" fx:id="userPane" layoutX="200.0" layoutY="85.0" prefHeight="416.0" prefWidth="700.0" stylesheets="@application.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TextField fx:id="newUserUsername" alignment="CENTER" layoutX="347.0" layoutY="204.0" />
+            <TextField fx:id="adminUsername" alignment="CENTER" layoutX="347.0" layoutY="61.0" />
+            <Label layoutX="123.0" layoutY="205.0" prefHeight="17.0" prefWidth="200.0" text="Nouveau utilisateur :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="157.0" prefHeight="17.0" prefWidth="200.0" text="Nom utilisateur :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="110.0" prefHeight="17.0" prefWidth="216.0" text="Mot de passe admin :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="62.0" prefHeight="22.0" prefWidth="222.0" text="Nom administrateur :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="validateUserButton" alignment="CENTER" layoutX="347.0" layoutY="290.0" mnemonicParsing="false" onAction="#updateUserButton" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #33698F;" stylesheets="@application.css" text="Validate" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="123.0" layoutY="253.0" prefHeight="22.0" prefWidth="216.0" text="Nouveau mot de passe :">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="newUserPassword" alignment="CENTER" layoutX="347.0" layoutY="252.0" />
+            <Label fx:id="errorUserLabel" layoutX="123.0" layoutY="344.0" prefHeight="19.0" prefWidth="329.0" textFill="#ff0000e0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <PasswordField fx:id="adminPassword" alignment="CENTER" layoutX="347.0" layoutY="109.0" />
+            <ComboBox fx:id="listUsers" layoutX="346.0" layoutY="156.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane1" layoutX="-1.0" prefHeight="84.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="53.0" layoutY="28.0" prefHeight="26.0" prefWidth="109.0" text="E-Cabinet" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="76.0" prefHeight="416.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Label layoutX="45.0" layoutY="332.0" text="DARDOURI Chaimae" textFill="WHITE" />
+            <Label layoutX="56.0" layoutY="358.0" text="OUALI Chaymaa" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="385.0" text="ADIL Ayoub" textFill="WHITE" />
+            <ImageView fitHeight="166.0" fitWidth="177.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/transparent-heart-icon-health-care-icon-medical-services-icon-5fcbd37a03aac1.974566991607193466015.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@application.css" />
+      <URL value="@application2.css" />
+   </stylesheets>
+</AnchorPane>

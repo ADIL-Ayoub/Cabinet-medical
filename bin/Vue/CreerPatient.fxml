@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="699.0" styleClass="backgrnd" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreerPatientController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="659.0" style="-fx-background-color: #33698F;" AnchorPane.bottomAnchor="368.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label layoutX="27.0" layoutY="7.0" text="Créer Patient :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtNom" layoutX="117.0" layoutY="142.0" prefHeight="27.0" prefWidth="162.0" />
+      <TextField fx:id="txtTel" layoutX="117.0" layoutY="258.0" prefHeight="27.0" prefWidth="162.0" />
+      <TextField fx:id="txtCin" layoutX="117.0" layoutY="200.0" prefHeight="27.0" prefWidth="162.0" />
+      <Label layoutX="353.0" layoutY="259.0" text="Date de Naissance :" AnchorPane.leftAnchor="354.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrenom" layoutX="517.0" layoutY="143.0" prefHeight="27.0" prefWidth="162.0" AnchorPane.rightAnchor="24.0" />
+      <Label layoutX="354.0" layoutY="143.0" text="Prénom :" AnchorPane.leftAnchor="354.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="279.0" layoutY="363.0" mnemonicParsing="false" onAction="#insertPatient" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #33698F;" styleClass="buttons" text="Créer" textFill="#fffffff2" AnchorPane.bottomAnchor="35.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cbSexe" layoutX="517.0" layoutY="202.0" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-width: 1.5px;" AnchorPane.rightAnchor="24.0" />
+      <DatePicker fx:id="dateP" layoutX="513.0" layoutY="258.0" prefHeight="29.0" prefWidth="162.0" />
+      <Label layoutX="353.0" layoutY="204.0" text="Sexe :" AnchorPane.leftAnchor="354.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="260.0" text="Tel :" AnchorPane.leftAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="201.0" text="CIN :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="143.0" text="Nom :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="381.0" layoutY="363.0" mnemonicParsing="false" onAction="#vider" style="-fx-background-color: #33698F;" styleClass="buttons" text="Vider" textFill="#fffffff2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtCreation" layoutX="52.0" layoutY="324.0" prefHeight="25.0" prefWidth="347.0" style="-fx-background-color: none;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>

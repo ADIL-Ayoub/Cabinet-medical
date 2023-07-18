@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Pane fx:id="statPane" layoutX="202.0" layoutY="73.0" prefHeight="428.0" prefWidth="708.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="73.0">
+         <children>
+            <LineChart fx:id="lineChart" layoutX="-6.0" layoutY="-1.0" prefHeight="428.0" prefWidth="321.0" title="Nombre de visites par mois pour l'année ">
+              <xAxis>
+                <CategoryAxis label="Mois" side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" label="Nombre de visites" side="LEFT" upperBound="50.0" />
+              </yAxis>
+            </LineChart>
+            <ComboBox fx:id="yearsBox" layoutX="305.0" layoutY="4.0" onAction="#changeData" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: transparent; -fx-background-color: #e8e8e8;" />
+            <BarChart fx:id="barChart" barGap="10.0" categoryGap="20.0" layoutX="396.0" layoutY="-1.0" legendVisible="false" prefHeight="428.0" prefWidth="251.0" title="Nombre total de patients">
+              <xAxis>
+                <CategoryAxis label="Genre" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Nombre de patients" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="909.0" style="-fx-background-color: #373737;" stylesheets="@application2.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pane1" layoutX="-11.0" layoutY="-10.0" prefHeight="71.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="28.0" prefHeight="26.0" prefWidth="109.0" text="E-Cabinet" textFill="WHITE">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="249.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHome" prefHeight="24.0" prefWidth="75.0" styleClass="btn-home" text="Accueil" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="585.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Yu Gothic Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="71.0" prefHeight="428.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <Label layoutX="45.0" layoutY="343.0" text="DARDOURI Chaimae" textFill="WHITE" />
+            <Label layoutX="56.0" layoutY="369.0" text="OUALI Chaymaa" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="396.0" text="ADIL Ayoub" textFill="WHITE" />
+            <ImageView fitHeight="166.0" fitWidth="177.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/transparent-heart-icon-health-care-icon-medical-services-icon-5fcbd37a03aac1.974566991607193466015.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

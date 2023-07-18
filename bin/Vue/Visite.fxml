@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="securiteStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VisiteController">
+   <children>
+      <Pane id="subPaneForm" fx:id="newVisitePane" layoutX="202.0" layoutY="84.0" prefHeight="416.0" prefWidth="698.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Label layoutX="35.0" layoutY="88.0" prefHeight="17.0" prefWidth="216.0" text="Date Visite">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="40.0" prefHeight="22.0" prefWidth="222.0" text="ID Patient">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="addNewVisite" alignment="CENTER" layoutX="345.0" layoutY="368.0" mnemonicParsing="false" onAction="#newVisite" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #33698F;" text="Validate" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorAdminLabel" layoutX="37.0" layoutY="272.0" prefHeight="17.0" prefWidth="216.0" textFill="#ff0000e0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpVisite" layoutX="260.0" layoutY="87.0" prefHeight="25.0" prefWidth="243.0" />
+            <ComboBox fx:id="patientListVisite" layoutX="259.0" layoutY="39.0" prefHeight="25.0" prefWidth="243.0" promptText="Choisir un patient" />
+            <Label layoutX="37.0" layoutY="127.0" prefHeight="17.0" prefWidth="122.0" text="Examen">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rdvHour" layoutX="502.0" layoutY="208.0" prefHeight="17.0" prefWidth="122.0" />
+            <Label layoutX="262.0" layoutY="9.0" prefHeight="17.0" prefWidth="161.0" text="Nouvelle Visite">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="examenArea" layoutX="260.0" layoutY="127.0" prefHeight="94.0" prefWidth="243.0" />
+            <TextArea fx:id="conclusionArea" layoutX="260.0" layoutY="245.0" prefHeight="94.0" prefWidth="243.0" />
+            <Label layoutX="37.0" layoutY="254.0" prefHeight="17.0" prefWidth="122.0" text="Conclusion">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningLabel" layoutX="37.0" layoutY="339.0" prefHeight="17.0" prefWidth="209.0" text="Veuillez remplir tous les champs" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="subPaneForm" fx:id="listVisitePane" layoutX="202.0" layoutY="94.0" prefHeight="416.0" prefWidth="698.0" stylesheets="@application.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Label fx:id="examenLabel" layoutX="14.0" layoutY="210.0" prefHeight="78.0" prefWidth="560.0" text="Examen : " />
+            <Button fx:id="deleteVisiteButton" alignment="CENTER" layoutX="577.0" layoutY="367.0" mnemonicParsing="false" onAction="#deleteVisiteButton" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #33698F;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorUserLabel" layoutX="37.0" layoutY="272.0" prefHeight="17.0" prefWidth="222.0" textFill="#ff0000e0" visible="false" />
+            <TableView fx:id="tableVisite" onMouseClicked="#fetchData" prefHeight="209.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="idVisiteC" prefWidth="54.0" text="ID_Visite" />
+                  <TableColumn fx:id="idPatientC" prefWidth="62.0" text="ID_Patient" />
+                  <TableColumn fx:id="dateVisiteC" prefWidth="94.0" text="Date de la visite" />
+                  <TableColumn fx:id="examenC" prefWidth="252.0" text="Examen" />
+                  <TableColumn fx:id="conclusionC" prefWidth="221.0" text="Conclusion" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label fx:id="conclusionLabel" layoutX="14.0" layoutY="289.0" prefHeight="78.0" prefWidth="560.0" text="Conclusion : " />
+         </children>
+      </Pane>
+      <Pane id="paneHorizentalBar" fx:id="pane1" layoutX="1.0" layoutY="-2.0" prefHeight="84.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="acceuilButton" alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="26.0" mnemonicParsing="false" onAction="#toHome" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="88.0" styleClass="btn-home" stylesheets="@../../bin/application/application.css" text="Acceuil" textOverrun="CLIP">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Yu Gothic Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="listVisiteButton" layoutX="513.0" layoutY="27.0" mnemonicParsing="false" onAction="#listVisitePage" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="140.0" styleClass="btn-home" text="Liste des visites">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="creerVisiteButton" layoutX="350.0" layoutY="27.0" mnemonicParsing="false" onAction="#creerVisitePage" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="140.0" styleClass="btn-home" text="Nouvelle visite">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <stylesheets>
+            <URL value="@application.css" />
+            <URL value="@application2.css" />
+         </stylesheets>
+      </Pane>
+      <Pane fx:id="pane1" prefHeight="84.0" prefWidth="202.0" style="-fx-background-color: #33698F;">
+         <children>
+            <Label layoutX="53.0" layoutY="28.0" prefHeight="26.0" prefWidth="109.0" text="E-Cabinet" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="76.0" prefHeight="416.0" prefWidth="202.0" style="-fx-background-color: #33698F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Label layoutX="45.0" layoutY="332.0" text="DARDOURI Chaimae" textFill="WHITE" />
+            <Label layoutX="56.0" layoutY="358.0" text="OUALI Chaymaa" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="385.0" text="ADIL Ayoub" textFill="WHITE" />
+            <ImageView fitHeight="166.0" fitWidth="177.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/transparent-heart-icon-health-care-icon-medical-services-icon-5fcbd37a03aac1.974566991607193466015.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

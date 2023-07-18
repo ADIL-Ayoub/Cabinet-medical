@@ -1,0 +1,32 @@
+/*SecuriteStage */
+#paneHorizentalBar{
+	-fx-background-color: #88d498;
+}
+#paneVerticalBar{
+	-fx-background-color: #c6dabf;
+}
+#securiteStage{
+	-fx-background-color: #f3e9d2;
+}
+
+#homeIconButton{
+	-fx-background-images: "s.png";
+}
+/*
+ * subPane is for all panes
+ */
+#subPane{
+	-fx-background-color: #1a936f;
+}
+#subPaneLogo{
+	-fx-background-color: #1a936f;
+}
+#subPaneForm{
+	-fx-background-color: #f3e9d2;
+	-fx-alignment: center;
+}
+#validateButton{
+	-fx-background-radius: 8px;
+}
+
+

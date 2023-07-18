@@ -1,0 +1,62 @@
+.parent{
+	-fx-background-color:transparent;
+}
+
+.pane{
+	-fx-background-color: #33698F;
+}
+
+.trans-btn-white-border{
+	-fx-background-color: transparent;
+	-fx-background-radius: 5px;
+	-fx-border-color: #cccccc;
+	-fx-border-radius: 5px;
+	-fx-text-fill: whitesmoke;
+	-fx-border-width:1px;
+	
+}
+
+.white-pane{
+	-fx-background-size: 281 386;
+	-fx-background-position: center center;
+	-fx-background-color: #FFFFFF;
+}
+
+.btn-home{
+	-fx-background-color: transparent;
+	-fx-background-radius: 5px;
+	-fx-border-color: #cccccc;
+	-fx-border-radius: 0px;
+	-fx-border-width: 0px 0px 2px 0px;
+	-fx-text-fill: whitesmoke;
+}
+.backgrnd{
+	-fx-background-color: #E7E7E7;
+	-fx-border-radius: 0px;
+}
+
+
+.buttons{
+	-fx-background-color: #0C0C0C;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #ffffff;
+}
+
+
+
+
+
+
+.pink-btn{
+	-fx-background-color: #C5304D;
+	-fx-background-radius: 3px;
+	-fx-text-fill: #FFFFFF;
+}
+
+.white-pane{
+	-fx-background-image: url("/images/aa.jpg");
+	-fx-background-size: 339 456;
+	-fx-background-position: center center;
+	-fx-background-color: #FFFFFF;
+	
+}
